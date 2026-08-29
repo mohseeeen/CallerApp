@@ -1,5 +1,3 @@
-
-
 /**
  * App
  * ابزار کمکی برای کار با DOM (کلاس، اتربیوت، ایونت، نمایش، دیتا)
@@ -290,13 +288,13 @@ const AlertBox = () => {
         App.addClass(LCD, "hidden");
         App.removeClass(ledCenter, "hidden");
         App.removeClass(buttonAlert, "hidden");
-        buttonsArrowAlert.forEach(i => {
+        buttonsArrowAlert.forEach((i) => {
             App.enable(i);
         });
-        buttonsArrowNumber.forEach(i => {
+        buttonsArrowNumber.forEach((i) => {
             App.disable(i);
         });
-        buttonsNumber.forEach(i => {
+        buttonsNumber.forEach((i) => {
             App.disable(i);
         });
     } else {
@@ -305,31 +303,31 @@ const AlertBox = () => {
         App.removeClass(ledRight, "hidden");
         App.removeClass(LCD, "hidden");
         App.removeClass(buttonCall, "hidden");
-        buttonsArrowAlert.forEach(i => {
+        buttonsArrowAlert.forEach((i) => {
             App.disable(i);
         });
-        buttonsArrowNumber.forEach(i => {
+        buttonsArrowNumber.forEach((i) => {
             App.enable(i);
         });
-        buttonsNumber.forEach(i => {
+        buttonsNumber.forEach((i) => {
             App.enable(i);
         });
     }
 };
 
-const theme_mode = val => {
+const theme_mode = (val) => {
     let el = document.documentElement;
     App.addAttr(el, "app-theme", val);
 };
 
-const rightLedPower = L => {
-  App.haptic();
+const rightLedPower = (L) => {
+    App.haptic();
     let led = App.qs("#" + L);
     App.toggleClass(led, "active");
 };
 
-const OpenPanel = p => {
-  App.haptic();
+const OpenPanel = (p) => {
+    App.haptic();
     let panel = App.qs(p);
     App.toggleClass(panel, "hidden");
 };
@@ -339,10 +337,10 @@ const items = App.qsa("#scrollBox .item");
 let index = 0;
 
 const updateActive = () => {
-    items.forEach(i => {
+    items.forEach((i) => {
         i.classList.remove("active");
         // پاک کردن کلاس‌های عددی قبلی
-        i.classList.forEach(c => {
+        i.classList.forEach((c) => {
             if (c.startsWith("step-")) i.classList.remove(c);
         });
     });
@@ -355,19 +353,16 @@ const updateActive = () => {
     activeItem.classList.add("alert-" + (index + 1));
     buttonAlert.value = "alert-" + (index + 1);
     // alert(index +1);
-    const scrollX =
-        activeItem.offsetLeft -
-        box.clientWidth / 2 +
-        activeItem.clientWidth / 2;
+    const scrollX = activeItem.offsetLeft - box.clientWidth / 2 + activeItem.clientWidth / 2;
 
     box.scrollTo({
         left: scrollX,
-        behavior: "smooth"
+        behavior: "smooth",
     });
 };
 
 const next = () => {
-  App.haptic();
+    App.haptic();
     if (index < items.length - 1) {
         index++;
         updateActive();
@@ -376,7 +371,7 @@ const next = () => {
 };
 
 const prev = () => {
-  App.haptic();
+    App.haptic();
     if (index > 0) {
         index--;
         updateActive();
@@ -386,7 +381,7 @@ const prev = () => {
 const SetNumber = (val = 0, type = "number") => {
     let bcallValue = Number(bcall.value);
     val = Number(val);
-    
+
     App.haptic();
 
     switch (type) {
@@ -435,7 +430,7 @@ const SetNumber = (val = 0, type = "number") => {
             App.removeClass(callRainbow, "grad");
             App.enable(bcall);
             App.enable(buttonAlert);
-            notIcon.forEach(i => {
+            notIcon.forEach((i) => {
                 App.removeClass(i, "active");
             });
             break;
@@ -444,7 +439,7 @@ const SetNumber = (val = 0, type = "number") => {
 
 // app play sound
 const SoundPlay = (sound, type = "number") => {
-  App.haptic();
+    App.haptic();
     switch (type) {
         // play number
         case "number":
@@ -462,23 +457,22 @@ const SoundPlay = (sound, type = "number") => {
                 sound + ".mp3", // فایل
                 () => {
                     App.toggleClass(callRainbow, "grad");
-                    console.log("🎵 پخش شروع شد");
-                    console.log(sound);
+                    console.log("🎵 پخش شروع شد" + ":" + sound);
+                    // console.log(sound);
                 },
                 () => {
                     App.enable(bcall);
                     App.toggleClass(callRainbow, "grad");
                     console.log("⏹️ پخش تموم شد");
-                }
+                },
             );
             break;
 
         // app custom alert
         case "alert":
-          
             App.disable(buttonAlert);
             App.playAudio(
-                "./sounds/alerts/", // پوشه
+                "./sounds/alerts", // پوشه
                 sound + ".mp3", // فایل
                 () => {
                     App.toggleClass(callRainbow, "grad");
@@ -488,12 +482,12 @@ const SoundPlay = (sound, type = "number") => {
                     App.enable(buttonAlert);
                     App.toggleClass(callRainbow, "grad");
                     console.log("⏹️ پخش تموم شد");
-                }
+                },
             );
             break;
 
         case "notification":
-          App.haptic();
+            App.haptic();
             App.playAudio(
                 "./sounds/notification/", // پوشه
                 sound + ".mp3", // فایل
@@ -504,10 +498,10 @@ const SoundPlay = (sound, type = "number") => {
                 () => {
                     App.toggleClass(callRainbow, "grad");
                     console.log("⏹️ پخش تموم شد");
-                    notIcon.forEach(i => {
+                    notIcon.forEach((i) => {
                         App.removeClass(i, "active");
                     });
-                }
+                },
             );
             break;
     }
