@@ -328,6 +328,11 @@ svg.shadow {
     margin-bottom: 1rem;
 }
 
+
+.visiblity-hidden {
+  visibility: hidden;
+}
+
 .text-color-50 {
     color: rgba( 255,255,255,0.5 );
 }
@@ -625,6 +630,14 @@ svg.shadow {
     opacity: .5;
 }
 
+#bcall svg {
+  transition: transform 0.5s ease;
+}
+
+#bcall:disabled svg {
+  transform: scale(0.8) rotate(45deg);
+}
+
 
 #mainOptions {
     background: #222;
@@ -638,4 +651,51 @@ svg.shadow {
 {
     background: #777;
     color: #222;
+}
+
+/* openHelp */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #2F2D2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;   /* اسکرول برای محتوای زیاد */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #333;
+  border-radius: 12px;
+  padding: 2.5rem 1rem;
+  width: 320px;
+  max-width: 500px;
+  margin: 2rem 0;
+  position: relative;
+  
+  
+  height: 1000px;
+  border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,1);
+}
+
+
+
+.modal-close {
+  
+  border: none;
+  background: #C3605A;
+  font-size: 22px;
+  cursor: pointer;
 }
