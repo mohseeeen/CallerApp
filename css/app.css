@@ -3,15 +3,15 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src:
-    url("../fonts/lcd.ttf") format("truetype");
+    src: url("../fonts/lcd.ttf") format("truetype");
 }
 
-:root, [app-theme="dark"]
-{
-    --body-font-family: system-ui, -apple-system,"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans",
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --body-bg: #2F2D2B;
+:root,
+[app-theme="dark"] {
+    --body-font-family:
+        system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --body-bg: #2f2d2b;
     --body-color: #ccc;
 
     /* form */
@@ -26,34 +26,27 @@
     --button-overly-opacity: 0.05;
     --button-bg-gradient-start-color: #424242;
     --button-bg-gradient-end-color: #424242;
-    --button-text-shadow-rgb: 0,0,0;
-    --buttom-box-shadow: 0 2px 0 rgba(0,0,0,.5),
-    inset 0 1px 0 rgba(255,255,255,.3);
+    --button-text-shadow-rgb: 0, 0, 0;
+    --buttom-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
     --button-border-width: 1px;
-    --button-border-color: #1E1E1E;
-    --button-focus-shadow: inset 0 0 4px 0px rgba(0,0,0,.36);
+    --button-border-color: #1e1e1e;
+    --button-focus-shadow: inset 0 0 4px 0px rgba(0, 0, 0, 0.36);
     --button-focus-bg: #212121;
     --button-disabled-bg: #999;
     --button-disabled-color: #444;
-    --button-disabled-text-shadow-rgb: 255,255,255;
+    --button-disabled-text-shadow-rgb: 255, 255, 255;
     --container-bg: #222;
-
 }
 
-
-
-[app-theme="light"]
-{
+[app-theme="light"] {
     --body-bg: #999;
     --container-bg: #666;
-
 
     /* form */
     --select-bg: #999;
     --select-border-color: #111;
     --select-color: #111;
 }
-
 
 /*reset*/
 *,
@@ -73,12 +66,14 @@ body {
     color: var(--body-color);
     margin: 0;
     padding: 0;
-   
 }
 
-
-h1,h2,h3,h4,h5,h6
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
@@ -92,8 +87,7 @@ select {
     color: var(--select-color);
     outline: 0;
 }
-input[type="text"]
-{
+input[type="text"] {
     background: var(--select-bg);
     border: 1px solid var(--select-border-color);
     color: var(--select-color);
@@ -105,9 +99,7 @@ input[type="text"]
     outline: 0;
 }
 
-
-table
-{
+table {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -128,8 +120,7 @@ svg {
 /*
  *    App Button Style
  */
-.btn
-{
+.btn {
     width: 100%;
     height: var(--button-height);
     padding: 0;
@@ -140,11 +131,11 @@ svg {
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: bold;
-    border: var(--button-border-width)solid var(--button-border-color);
+    border: var(--button-border-width) solid var(--button-border-color);
     background: linear-gradient(180deg, var(--button-bg-gradient-start-color), var(--button-bg-gradient-end-color));
     color: var(--button-color);
     position: relative;
-    text-shadow: 1px 1px rgba(var(--button-text-shadow-rgb),0.4);
+    text-shadow: 1px 1px rgba(var(--button-text-shadow-rgb), 0.4);
     box-shadow: var(--buttom-box-shadow);
 }
 
@@ -161,23 +152,23 @@ svg {
     /* border: 1px solid #fff; */
 }
 
-.btn:focus
-{
+.btn:focus {
     background: var(--button-focus-bg);
-    box-shadow: 0 2px 0 rgba(255,255,255,.3), inset 0 0 4px rgba(0,0,0,.56);
-    border-color: rgba(0,0,0,0.8);
+    box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.3),
+        inset 0 0 4px rgba(0, 0, 0, 0.56);
+    border-color: rgba(0, 0, 0, 0.8);
 }
 .btn:disabled {
     background: var(--button-disabled-bg);
     border-color: #000;
     color: var(--button-disabled-color);
-    text-shadow: 1px 1px rgba(var(--button-disabled-text-shadow-rgb),0.4);
+    text-shadow: 1px 1px rgba(var(--button-disabled-text-shadow-rgb), 0.4);
 }
 .btn.mini {
     font-size: 1rem;
 }
-button svg
-{
+button svg {
     width: 24px;
     fill: curentcolor;
 }
@@ -199,7 +190,7 @@ button svg
     --button-focus-bg: #388e3c;
     --button-disabled-bg: #388e3c;
     --button-disabled-color: #1b5e20;
-    --button-disabled-text-shadow-rgb: 255,255,255;
+    --button-disabled-text-shadow-rgb: 255, 255, 255;
 }
 
 .b_orange {
@@ -209,7 +200,7 @@ button svg
     --button-bg-gradient-end-color: #ffb74d;
     --button-bg-gradient-end-color: #ffb74d;
     --button-color: #111;
-    --button-text-shadow-rgb: 255,255,255;
+    --button-text-shadow-rgb: 255, 255, 255;
     --button-focus-bg: #ff9800;
 }
 
@@ -218,20 +209,19 @@ button svg
     --button-color: #111;
     --button-overly-bg: #000;
     --button-overly-opacity: 0.1;
-    --button-bg-gradient-start-color: #99ABC1;
-    --button-bg-gradient-end-color: #99ABC1;
-    --button-text-shadow-rgb: 255,255,255;
+    --button-bg-gradient-start-color: #99abc1;
+    --button-bg-gradient-end-color: #99abc1;
+    --button-text-shadow-rgb: 255, 255, 255;
     --button-focus-bg: #8da0b8;
 }
 
 .b_danger {
-
     --button-overly-bg: #000;
     --button-overly-opacity: 0.1;
-    --button-bg-gradient-start-color: #C3605A;
-    --button-bg-gradient-end-color: #C3605A;
+    --button-bg-gradient-start-color: #c3605a;
+    --button-bg-gradient-end-color: #c3605a;
 
-    --button-focus-bg: #C3605A;
+    --button-focus-bg: #c3605a;
 }
 
 .b_tan {
@@ -240,7 +230,7 @@ button svg
     --button-overly-opacity: 0.1;
     --button-bg-gradient-start-color: #ffe0b2;
     --button-bg-gradient-end-color: #ffe0b2;
-    --button-text-shadow-rgb: 255,255,255;
+    --button-text-shadow-rgb: 255, 255, 255;
     --button-focus-bg: #ffcc80;
 }
 
@@ -250,27 +240,22 @@ button svg
     --button-overly-opacity: 0.1;
     --button-bg-gradient-start-color: #9fa8da;
     --button-bg-gradient-end-color: #9fa8da;
-    --button-text-shadow-rgb: 255,255,255;
+    --button-text-shadow-rgb: 255, 255, 255;
     --button-focus-bg: #7986cb;
 }
 
-
 /*  custom class  */
-.shadow_1
-{
-    box-shadow: 1px 1px rgba(0,0,0,05);
-} 
+.shadow_1 {
+    box-shadow: 1px 1px rgba(0, 0, 0, 05);
+}
 svg.shadow {
-  filter: drop-shadow(1px 1px 0 rgba(0,0,0,0.4));
+    filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.4));
 }
 
-
-.hidden
-{
+.hidden {
     display: none !important;
 }
-.show
-{
+.show {
     display: block !important;
 }
 
@@ -328,16 +313,15 @@ svg.shadow {
     margin-bottom: 1rem;
 }
 
-
 .visiblity-hidden {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .text-color-50 {
-    color: rgba( 255,255,255,0.5 );
+    color: rgba(255, 255, 255, 0.5);
 }
 [app-theme="light"] .text-color-50 {
-    color: rgba( 0,0,0,0.5 );
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .rtl {
@@ -356,7 +340,6 @@ svg.shadow {
     text-align: right;
 }
 
-
 #Center {
     width: 100%;
     height: calc(100vh);
@@ -366,20 +349,17 @@ svg.shadow {
     background: grern;
 }
 
-
-.container
-{
+.container {
     background: var(--container-bg);
     width: 320px;
     /* margin: 2rem auto; */
     padding: 4px;
     border: 1px solid #000;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0,0,0,1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
 }
 
-.app-monitor
-{
+.app-monitor {
     height: 110px;
     border: 1px solid #000;
     background: #111;
@@ -396,17 +376,16 @@ svg.shadow {
     color: #bc2020;
 }
 
-
-
 /* right mini lcd */
-.led-right
-{
+.led-right {
     position: absolute;
     width: 28px;
     height: 100px;
     background: #090909;
     border: 1px solid #000;
-    box-shadow: inset 0 0 4px #000, 0 0 2px rgba(255,255,255,.1);
+    box-shadow:
+        inset 0 0 4px #000,
+        0 0 2px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     top: 5px;
     right: 5px;
@@ -414,7 +393,7 @@ svg.shadow {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgba(255,255,255,0.06);
+    color: rgba(255, 255, 255, 0.06);
 }
 
 .led-right span {
@@ -429,8 +408,7 @@ svg.shadow {
 }
 
 /* center lcd */
-.led-center
-{
+.led-center {
     width: 100%;
     /* background: gray; */
     margin: 0 4px;
@@ -438,11 +416,11 @@ svg.shadow {
     scroll-behavior: smooth;
     scrollbar-width: none;
     gap: 10px;
-    color: rgba(255,255,255,.1);
+    color: rgba(255, 255, 255, 0.1);
     overflow-x: auto;
     direction: ltr;
-    padding-left: calc( 100% - 188px );
-    padding-right: calc( 100% - 188px );
+    padding-left: calc(100% - 188px);
+    padding-right: calc(100% - 188px);
 }
 .led-center::-webkit-scrollbar {
     display: none;
@@ -455,7 +433,9 @@ svg.shadow {
     height: 64px;
     background: #090909;
     border: 1px solid #000;
-    box-shadow: inset 0 0 4px #000, 0 0 2px rgba(255,255,255,.1);
+    box-shadow:
+        inset 0 0 4px #000,
+        0 0 2px rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     transition:
         color 400ms ease,
@@ -463,16 +443,13 @@ svg.shadow {
     transform: scale(0.9);
     position: relative;
 }
-.led-center .active
-{
-    Color: #ffcc80;
+.led-center .active {
+    color: #ffcc80;
     transform: scale(1);
 }
 
-
 /* top left online lighting */
-.mainOnline
-{
+.mainOnline {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -483,10 +460,9 @@ svg.shadow {
     height: 18px;
     border-radius: 50%;
     background: #000;
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.app-monitor .online
-{
+.app-monitor .online {
     display: block;
     width: 10px;
     height: 10px;
@@ -510,27 +486,26 @@ svg.shadow {
     }
 }
 
-
 /* musiz player */
 .app-monitor-player {
     height: 80px;
     margin-top: 4px;
+    transition: all 3s ease;
 }
-.app-monitor-player button
-{
+.app-monitor-player.hidden {
+    height: 0;
+}
+.app-monitor-player button {
     width: 42px;
     height: 42px;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     --button-bg-gradient-start-color: #222;
     --button-bg-gradient-end-color: #333;
-    --button-text-shadow-rgb: 0,0,0;
-    --buttom-box-shadow: 0 0 0 rgba(0,0,0,.5),
-    inset 0 1px 0 rgba(255,255,255,.2);
+    --button-text-shadow-rgb: 0, 0, 0;
+    --buttom-box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-
 }
-.app-monitor-player button::after
-{
+.app-monitor-player button::after {
     border-radius: 50%;
 }
 
@@ -540,39 +515,20 @@ svg.shadow {
     background: #333;
     margin: 4px 0;
     border: 1px solid #111;
-    background: linear-gradient(
-    90deg,
-    #222,
-    #444,
-    #222
-    );
+    background: linear-gradient(90deg, #222, #444, #222);
     position: relative;
     overflow: hidden;
 }
-[app-theme="light"] .divider
-{
-    background: linear-gradient(
-    90deg,
-    #999,
-    #666,
-    #999
-    );
+[app-theme="light"] .divider {
+    background: linear-gradient(90deg, #999, #666, #999);
 }
-
 
 .divider.grad::after {
     content: "";
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(
-    90deg,
-    transparent,
-    orange,
-    red,
-    orange,
-    transparent
-    );
+    background: linear-gradient(90deg, transparent, orange, red, orange, transparent);
     position: absolute;
     left: calc(50% - 40px);
     top: calc(50% - 40px);
@@ -594,10 +550,9 @@ svg.shadow {
     }
 }
 
-.mainKeys
-{
+.mainKeys {
     /* background: #999; */
-    background-image: url('/img/bg_2.jpeg');
+    background-image: url("/img/bg_2.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -606,96 +561,87 @@ svg.shadow {
     padding: 4px 0;
     border-radius: 4px;
 }
-[app-theme="light"] .mainKeys
-{
-    background-image: url('/img/bg_1.jpeg');
+[app-theme="light"] .mainKeys {
+    background-image: url("/img/bg_1.jpeg");
 }
 
-
 .caller_button {
-    background:
-    linear-gradient(180deg, #333, #222);
+    background: linear-gradient(180deg, #333, #222);
     color: #ccc;
     border: 1px solid #111;
     border-radius: 8px;
     margin-top: 4px;
     padding: 4px;
 }
-.caller_button button
-{
+.caller_button button {
     height: 64px;
 }
-.caller_button button:disabled
-{
-    opacity: .5;
+.caller_button button:disabled {
+    opacity: 0.5;
 }
 
 #bcall svg {
-  transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 #bcall:disabled svg {
-  transform: scale(0.8) rotate(45deg);
+    transform: scale(0.8) rotate(45deg);
 }
-
 
 #mainOptions {
     background: #222;
-    box-shadow: inset 0 0 4px #000, 0 0 2px rgba(255,255,255,.1);
+    box-shadow:
+        inset 0 0 4px #000,
+        0 0 2px rgba(255, 255, 255, 0.1);
     padding: 8px;
     border-radius: 4px;
     font-size: 14px;
     margin-top: 8px;
 }
-[app-theme="light"] #mainOptions
-{
+[app-theme="light"] #mainOptions {
     background: #777;
     color: #222;
 }
 
 /* openHelp */
 .modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: #2F2D2B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow-y: auto;   /* اسکرول برای محتوای زیاد */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
+    position: fixed;
+    inset: 0;
+    background: #2f2d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto; /* اسکرول برای محتوای زیاد */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
 }
 
 .modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-box {
-  background: #333;
-  border-radius: 12px;
-  padding: 2.5rem 1rem;
-  width: 320px;
-  max-width: 500px;
-  margin: 2rem 0;
-  position: relative;
-  
-  
-  height: 1000px;
-  border: 1px solid #000;
+    background: #333;
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    width: 320px;
+    max-width: 500px;
+    margin: 2rem 0;
+    position: relative;
+
+    height: 1000px;
+    border: 1px solid #000;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0,0,0,1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
 }
 
-
-
 .modal-close {
-  
-  border: none;
-  background: #C3605A;
-  font-size: 22px;
-  cursor: pointer;
+    border: none;
+    background: #c3605a;
+    font-size: 22px;
+    cursor: pointer;
 }
