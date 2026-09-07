@@ -162,8 +162,8 @@ svg {
 .btn:disabled {
     background: var(--button-disabled-bg);
     border-color: #000;
-    color: var(--button-disabled-color);
-    text-shadow: 1px 1px rgba(var(--button-disabled-text-shadow-rgb), 0.4);
+    color: var(--button-disabled-bg);
+    text-shadow: none !important;
 }
 .btn.mini {
     font-size: 1rem;
@@ -555,17 +555,55 @@ svg.shadow {
 
 .mainKeys {
     /* background: #999; */
-    background-image: url("/img/bg_2.jpeg");
+   /*  background-image: url("/img/bg_2.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
+    background:
+    /* خط‌های ریز افقی - حس براش فلزی */
+    repeating-linear-gradient(
+      180deg,
+      rgba(255,255,255,0.025) 0px,
+      rgba(255,255,255,0.025) 1px,
+      rgba(0,0,0,0.05) 2px,
+      rgba(0,0,0,0.05) 3px
+    ),
+    /* گرادیان نوری مورب */
+    linear-gradient(
+      135deg,
+      #3a3a3a 0%,
+      #232323 20%,
+      #2e2e2e 40%,
+      #181818 55%,
+      #2a2a2a 75%,
+      #1c1c1c 100%
+    );
     border: 1px solid #111;
     margin-top: 4px;
     padding: 4px 0;
     border-radius: 4px;
 }
 [app-theme="light"] .mainKeys {
-    background-image: url("/img/bg_1.jpeg");
+  background:
+    /* خط‌های ریز افقی - حس براش فلزی */
+    repeating-linear-gradient(
+      180deg,
+      rgba(255,255,255,0.35) 0px,
+      rgba(255,255,255,0.35) 1px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 3px
+    ),
+    /* گرادیان نوری مورب */
+    linear-gradient(
+      135deg,
+      #f2f2f2 0%,
+      #d9d9d9 20%,
+      #e8e8e8 40%,
+      #c4c4c4 55%,
+      #e0e0e0 75%,
+      #cfcfcf 100%
+    );
+    /* background-image: url("/img/bg_1.jpeg"); */
 }
 
 .caller_button {
