@@ -510,3 +510,36 @@ const SoundPlay = (sound, type = "number") => {
     }
 };
 // end SoundPlay
+
+//online/offline
+/**
+ * بررسی وضعیت اینترنت
+ * --------------------
+ * آنلاین  → کلاس offline حذف می‌شود
+ * آفلاین → کلاس offline اضافه می‌شود
+ */
+
+const online = document.querySelector('.mainOnline .online');
+
+async function checkInternet() {
+    try {
+        const response = await fetch('/api/ping.php', {
+            cache: 'no-store'
+        });
+
+        if (!response.ok) {
+            throw new Error();
+        }
+
+        console.log('آنلاین');
+        online.classList.remove('offline');
+
+    } catch {
+        console.log('آفلاین');
+        online.classList.add('offline');
+    }
+}
+
+checkInternet();
+
+setInterval(checkInternet, 5000);
